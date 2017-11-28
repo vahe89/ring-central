@@ -16,7 +16,7 @@ class Dashboard extends Controller
     }
     function index()
     {
-        $model = new Operators_model();
+        $model = new Operators_Model();
         $this->view->render('dashboard/index',['operators_list'=>[]]);
     }
     function logout()
@@ -57,7 +57,7 @@ class Dashboard extends Controller
     }
 
     function dataList(){
-        $model = new Operators_model();
+        $model = new Operators_Model();
         $data = $model->findAll(false);
         $result['data'] = $data;
 
